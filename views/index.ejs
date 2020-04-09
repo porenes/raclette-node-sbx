@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/semantic.min.css">
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="/javascript/semantic.min.js"></script>
-  </head>
-  <body>
-    <div class="ui inverted menu">
-      <a href="/" class="active item"><%= title %></a>
-  </div>
-  <div class="ui one column container">
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/javascript/semantic.min.js"></script>
+</head>
+
+<body>
+  <div class="ui raised very padded text container segment">
+    <h1><%= title %></h1>
     <%= welcome_message %>
   </div>
-  </body>
+  <div class="ui padded container">
+    <form action="/suggest" class="ui form">
+    <div class="field">
+      <label for="quote">Quote</label>
+      <input type="text" name="quote" id="quote" placeholder="A nice quote about cheese">
+    </div>
+    <button type="submit" class="ui button">
+      <i class="comment"></i>
+      Submit
+    </button>
+    </form>
+  </div>
+</body>
+
 </html>

@@ -15,4 +15,12 @@ router.get('/', function(req, res, next) {
   { title: 'NodeJS Raclette Sandbox', welcome_message: welcome_messages[mes_id] });
 });
 
+
+/* POST suggest */
+router.get('/suggest', (req, res, next) => {
+  console.log(req.query.quote)
+  res.redirect('/')
+})
+
+
 module.exports = router;
